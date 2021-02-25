@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="db58_platform_flow@test-jinrong07.db.58dns.org" uuid="f85bdf4d-c5e6-4151-b846-ad73bd4b1651">
+      <database-info product="MySQL" version="5.7.22-log" jdbc-version="3.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.10 ( Revision: ${svn.Revision} )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>plf_flow_test</user-name>
+      <introspection-schemas>*:db58_platform_flow</introspection-schemas>
+    </data-source>
+  </component>
+</project>

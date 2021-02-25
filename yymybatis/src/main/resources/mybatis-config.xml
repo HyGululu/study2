@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--     核心配置文件    -->
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <!--     数据库连接   -->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://test-jinrong07.db.58dns.org:53022/db58_platform_flow?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+                <property name="username" value="plf_flow_test"/>
+                <property name="password" value="604e81ff0002c507"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--     每一个Mapper.xml都需要Mybatis核心配置文件中注册    -->
+        <mapper resource="dao/TestDataMapper.xml"/>
+    </mappers>
+</configuration>

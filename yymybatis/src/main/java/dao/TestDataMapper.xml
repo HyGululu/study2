@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.TestDataMapper">
+    <resultMap id="BaseResultMap" type="pojo.TestData">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="caseId" property="caseId" jdbcType="BIGINT"/>
+        <result column="caseName" property="caseName" jdbcType="CHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="ignoreData" property="ignoreData" jdbcType="CHAR"/>
+        <result column="premise" property="premise" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="request" property="request" jdbcType="VARCHAR"/>
+        <result column="response" property="response" jdbcType="VARCHAR"/>
+        <result column="interfaceName" property="interfaceName" jdbcType="CHAR"/>
+        <result column="applicationName" property="applicationName" jdbcType="CHAR"/>
+        <result column="serviceName" property="serviceName" jdbcType="CHAR"/>
+        <result column="project" property="project" jdbcType="CHAR"/>
+        <result column="type" property="type" jdbcType="CHAR"/>
+        <result column="version" property="version" jdbcType="CHAR"/>
+        <result column="comments" property="comments" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="smoke" property="smoke" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseId, caseName, status, ignoreData, premise, url, request, response, interfaceName, applicationName, serviceName, project, `type`, version, comments, createTime, updateTime, smoke
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM test_data
+        where id = #{id,jdbcType=BIGINT}
+
+    </select>
+</mapper>
